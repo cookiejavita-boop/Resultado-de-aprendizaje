@@ -1,0 +1,29 @@
+\documentclass[border=4pt]{standalone}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\definecolor{teoria}{HTML}{087E8B}
+\definecolor{medida}{HTML}{C45B27}
+\IfFileExists{analysis/datos_figura.csv}{\def\datos{analysis/datos_figura.csv}}{\def\datos{../analysis/datos_figura.csv}}
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}[
+ width=15.5cm,height=8cm,
+ xlabel={Carga aplicada, $P$ (kN)},ylabel={Deflexión central, $\delta$ (mm)},
+ xmin=-0.5,xmax=41,ymin=-0.035,ymax=2.2,
+ xtick={0,5,...,40},ytick={0,0.5,...,2},
+ tick label style={font=\small},label style={font=\small},
+ scaled ticks=false,/pgf/number format/use comma,
+ axis line style={black!50},tick style={black!40},
+ grid=major,grid style={black!12},
+ legend style={at={(0.03,0.97)},anchor=north west,draw=none,fill=white,font=\small},
+ legend cell align=left]
+\addplot[teoria,thick,dashed,no marks] table[x=carga_kN,y=deflexion_teorica_mm,col sep=comma]{\datos};
+\addlegendentry{Euler--Bernoulli}
+\addplot[medida,only marks,mark=*,mark size=2.5pt,mark options={fill=white,line width=1.1pt}] table[x=carga_kN,y=deflexion_medida_mm,col sep=comma]{\datos};
+\addlegendentry{Datos medidos (sintéticos)}
+\end{axis}
+\end{tikzpicture}
+\end{document}
