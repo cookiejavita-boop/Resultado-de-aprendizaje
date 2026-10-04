@@ -15,14 +15,5 @@
 6. Se revisaron los rangos de las dos series del gráfico, las unidades y las nueve cargas. La figura del reporte usa valores exportados de las mismas celdas.
 7. Se compiló la nota localmente con pdfLaTeX y BibTeX y se revisaron visualmente sus páginas y referencias. La apertura en Excel y la compilación en la cuenta de Overleaf del estudiante quedan pendientes de revisión personal.
 
-## Cambios, correcciones y decisiones
 
-Se conservó la geometría y E entregados, sin ajustarlos para hacer coincidir los datos. Se definió expresamente la diferencia relativa respecto del valor teórico y se excluyó únicamente el cociente a carga cero. No se atribuyeron las desviaciones a causas experimentales reales, ya que los datos son sintéticos. Se verificaron el eje numérico del gráfico, la fila final y la legibilidad de las cifras. No se fabricó un historial ni un hash de GitHub.
 
-La plantilla de Overleaf no estaba entre los adjuntos; se creó una fuente independiente. La generación asistida de los archivos no equivale a una ejecución manual realizada por el estudiante. El flujo de continuación utiliza Excel y LaTeX, sin scripts de análisis.
-
-## Responsabilidad y revisión del estudiante
-
-**Estado:** la revisión personal y la publicación en GitHub están pendientes. No se declara que el estudiante haya ejecutado las verificaciones automatizadas ni que ya haya defendido el contenido.
-
-Antes de la entrega, el estudiante debe comprobar las fórmulas en Excel, repetir al menos la comprobación de 40 kN, recompilar en Overleaf y verificar que entiende la medida relativa y los límites del modelo. Solo después de realizar esa revisión corresponde registrar su conformidad con la declaración de la plantilla: «Declaro comprender y poder defender el contenido entregado».
